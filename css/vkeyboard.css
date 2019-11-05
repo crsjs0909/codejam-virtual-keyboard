@@ -1,0 +1,99 @@
+.vkrow {
+    display: inline-flex;
+
+}
+
+.vkey {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border: solid gray 1px;
+    border-radius: 3px;
+    margin-left: 3px;
+    text-align: center;
+    padding: 0;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+
+char {
+    padding-top: 18px;
+    color: white;
+    top: 0;
+    left: 20px;
+    position: absolute;
+    text-transform: uppercase;
+    overflow: hidden;
+
+}
+
+upchar {
+    color: greenyellow;
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    margin: 0;
+    top: 5px;
+    left: 5px;
+
+}
+
+.pressed {
+    background-color: greenyellow;
+}
+
+.default {
+    background-color: black;
+}
+
+#console {
+    width: 100%;
+    border: solid 3px green;
+    height: 300px;
+    overflow-y: scroll;
+    background-color: lightgoldenrodyellow;
+}
+
+#i_am_da_one {
+    overflow: scroll;
+}
+
+.hold {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: all .1s ease-in-out;
+}
+
+.free {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    transition: all .1s ease-in-out;
+}
+
+.wrapper {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto auto;
+}
+
+.caps-on {
+    background-color: red;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 5px;
+    width: 5px;
+}
