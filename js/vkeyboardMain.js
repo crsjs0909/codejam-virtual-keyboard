@@ -153,10 +153,17 @@ function main() {
     screen.addEventListener("focus", bindArea);
     vk.render(document.getElementById("here"));
 
+    let oldLayout=window.sessionStorage.getItem("vk_layout");
+    console.log(oldLayout);
+    if (oldLayout===undefined || oldLayout===null){
+        oldLayout=0;
+    }
+    vk.setLayout(oldLayout);
 
     document.addEventListener('keydown', function (event) {
         if (event.altKey && event.shiftKey) {
             vk.switchLayout();
+            window.sessionStorage.setItem("vk_layout", vk.layout);
         }
     });
 }
