@@ -11,8 +11,7 @@ class Composer {
 
     render(parent) {
         let e = parent ? parent : document.getElementById(this.id);
-        e.innerHTML = ""; //clear
-        this.childs.forEach(r => e.innerHTML += r.skel()); //add nodes into DOM
+        e.innerHTML = this.childs.map(e=>e.skel()).join("\n");//add nodes into DOM
         this.childs.forEach(r => r.render()); //render each node
     }
 
